@@ -1,0 +1,24 @@
+{
+	"parameters": [
+		{
+			"name": "employee_name",
+			"type": "String",
+			"validation": []
+		},
+		{
+			"name": "status",
+			"type": "int",
+			"validation": []
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"employee_hierarchy"
+			],
+			"class": "com.sim.pricingassistant.funson.TestManager",
+			"name": "batchProcess",
+			"db": "batchProcess"
+		}
+	]
+}

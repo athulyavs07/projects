@@ -1,0 +1,13 @@
+{
+  "parameters":[ 
+  
+  ],
+  "functions":[
+    {
+      "class"  :  "com.brandanswers.dashboard.funson.RADManager",
+      "name" : "getRADInternCount",
+      "db":"getRADInternCount"
+      }
+   
+  ]
+}

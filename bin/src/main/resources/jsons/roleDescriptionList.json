@@ -1,0 +1,28 @@
+{
+	"parameters": [
+	
+	{
+			"name": "department",
+			"type": "String",
+			"validation":[],
+			"nullable":true
+		},
+		{
+			"name": "role",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				    "department",
+				    "role"			
+			],
+			"class": "com.brandanswers.dashboard.funson.RADManager",
+			"name": "roleDescriptionList",
+			"db": "roleDescriptionList"
+		}
+	]
+}

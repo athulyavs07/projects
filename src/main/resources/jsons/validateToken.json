@@ -1,0 +1,21 @@
+{
+	"parameters": [
+		{
+			"name": "token",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		}
+	],
+	"functions": [
+
+		{
+			"params": [
+				"token"
+			],
+			"class": "com.brandanswers.dashboard.funson.ResetManager",
+			"name": "tokenVerification",
+			"db": "tokenVerification"
+		}
+	]
+}

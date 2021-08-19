@@ -1,0 +1,30 @@
+{
+	"parameters": [
+	{
+			"name": "fromDate",
+			"type": "Date",
+			"validation":[],
+			"nullable":false
+		},
+		{
+			"name": "toDate",
+			"type": "Date",
+			"validation":[],
+			"nullable":false
+		}
+		
+	],
+	
+	"functions": [
+		{
+			"params": [
+				"fromDate",
+				"toDate"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "getRevenueDetails"
+			
+		}
+	     
+	]
+}

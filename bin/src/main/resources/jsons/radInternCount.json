@@ -1,0 +1,21 @@
+{
+  "parameters":[ 
+  {
+			"name": "role",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		}
+  ],
+  "functions":[
+    {
+    "params": [
+			    "role"			
+			],
+      "class"  :  "com.brandanswers.dashboard.funson.RADManager",
+      "name" : "getRADInternCount",
+      "db":"getRADInternCount"
+      }
+   
+  ]
+}

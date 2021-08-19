@@ -1,0 +1,14 @@
+{
+	"parameters": [
+	],
+	"functions": [
+		{
+			"params": [
+			   		
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "getActiveInactiveRAD",
+			"db": "getTotalCompanyEmployees"
+		}
+	]
+}

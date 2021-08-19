@@ -1,0 +1,150 @@
+{
+	"requests": [
+		{
+			"name": "getUser",
+			"file": "getUser.json"
+		},
+		{
+			"name": "searchEmployee",
+			"file": "searchEmployee.json"
+		},
+		{
+			"name": "searchTotalEmployee",
+			"file": "searchTotalEmployee.json"
+		},
+		{
+			"name": "searchTotalTerminatedEmployee",
+			"file": "searchTotalTerminatedEmployee.json"
+		},
+		{
+			"name": "insertEmployee",
+			"file": "insertEmployee.json"
+		},
+		{
+			"name": "updateToken",
+			"file": "updateToken.json"
+		},
+		{
+			"name": "forgotPassword",
+			"file": "forgotPassword.json"
+		},
+		{
+			"name": "resetPassword",
+			"file": "resetPassword.json"
+		},
+		{
+			"name": "validateToken",
+			"file": "validateToken.json"
+		},
+		{
+			"name": "changePassword",
+			"file": "changePassword.json"
+		},
+		{
+			"name": "emailVerification",
+			"file": "emailVerification.json"
+		},
+		{
+			"name": "noOfProjects",
+			"file": "noOfProjects.json"
+		},
+		{
+			"name": "activeFinishedProjects",
+			"file": "activeFinishedProjects.json"
+		},
+		{
+			"name": "selectClientDetails",
+			"file": "selectClientDetails.json"
+		},
+		{
+			"name": "totalRAD",
+			"file": "totalRAD.json"
+		},
+		{
+			"name": "activeInactiveRAD",
+			"file": "activeInactiveRAD.json"
+		},
+		{
+			"name": "insertSalary",
+			"file": "insertSalary.json"
+		},
+		{
+			"name": "totalEmployees",
+			"file": "totalEmployees.json"
+		},
+		{
+			"name": "projectDetails",
+			"file": "projectDetails.json"
+		},
+		{
+			"name": "updateEmployee",
+			"file": "updateEmployee.json"
+		},
+		{
+			"name": "revenueDetails",
+			"file": "revenueDetails.json"
+		},
+		{
+			"name": "deleteEmployeeDetails",
+			"file": "deleteEmployeeDetails.json"
+		},
+		{
+			"name": "insertClients",
+			"file": "insertClients.json"
+		},
+		{
+			"name": "deleteClientDetails",
+			"file": "deleteClientDetails.json"
+		},
+		{
+			"name": "updateClients",
+			"file": "updateClients.json"
+		},
+		{
+			"name": "insertProjects",
+			"file": "insertProjects.json"
+		},
+		{
+			"name": "updateProjects",
+			"file": "updateProjects.json"
+		},
+		{
+			"name": "searchRADDetails",
+			"file": "searchRADDetails.json"
+		},
+		{
+			"name": "radInternCount",
+			"file": "radInternCount.json"
+		},
+		{
+			"name": "roleStatusBar",
+			"file": "roleStatusBar.json"
+		},
+		{
+			"name": "insertRAD",
+			"file": "insertRAD.json"
+		},
+		{
+			"name": "departmentList",
+			"file": "departmentList.json"
+		},
+		{
+			"name": "roleList",
+			"file": "roleList.json"
+		},
+		{
+			"name": "roleDescriptionList",
+			"file": "roleDescriptionList.json"
+    },
+    {
+			"name": "searchIndividualRAD",
+			"file": "searchIndividualRAD.json"
+		},
+		{
+			"name": "updateRAD",
+			"file": "updateRAD.json"
+		}
+		
+					
+]
+}

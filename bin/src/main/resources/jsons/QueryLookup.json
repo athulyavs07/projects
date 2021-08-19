@@ -1,0 +1,789 @@
+{
+	"getUser": {
+		"parameters": [
+			{
+				"name": "username",
+				"type": "String"
+			}
+		],
+		"query": "SELECT * FROM userdata where user_name = ?"
+	},
+	"getEmployeeDetails": {
+		"parameters": [
+			{
+				"name": "eid",
+				"type": "Integer"
+			}
+		],
+		"query": "select * from employee where eid = ?"
+	},
+	"getTotalEmployees": {
+		"parameters": [
+			
+		],
+		"query": "select * from employee"
+	},
+	"getTotalTerminatedEmployees": {
+		"parameters": [
+			
+		],
+		"query": "select count(*) as rowcount from employee where emp_status='0'"
+	},
+	"insertEmployee": {
+		"parameters": [
+		{
+			"name": "eid",
+			"type": "String"
+		},
+		{
+			"name": "name",
+			"type": "String"
+		},
+		{
+			"name": "role",
+			"type": "String"
+		},
+		{
+			"name": "workmail",
+			"type": "String"
+		},
+		{
+			"name": "personal_mail",
+			"type": "String"
+		},
+		{
+			"name": "contact_number",
+			"type": "String"
+		},
+		{
+			"name": "dob",
+			"type": "Date"
+		},
+		{
+			"name": "on_project",
+			"type": "String"
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date"
+		},
+		{
+			"name": "termination_date",
+			"type": "Date"
+		},
+		{
+			"name": "gender",
+			"type": "String"
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer"
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer"
+		},
+		{
+			"name": "attachment",
+			"type": "String"
+		},
+		{
+			"name": "branch_name",
+			"type": "String"
+		},
+		{
+			"name": "aadhaar",
+			"type": "String"
+		},
+		{
+			"name": "account_number",
+			"type": "String"
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String"
+		},
+		{
+			"name": "bank_name",
+			"type": "String"
+		},
+		{
+			"name": "role_status",
+			"type": "String"
+		}
+		
+			
+		],
+		"query": "insert into employee (eid ,account_number, role ,gender ,on_project ,hiring_date ,contact_number  , ifsc_code, photo ,termination_date  , work_mail, dob , personal_mail , emp_status , branch_name, name, bank_name, role_status, aadhaar )values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *"
+	},
+	"updateToken": {
+		"parameters": [
+			{
+				"name": "token",
+				"type": "String"
+			},
+			{
+				"name": "username",
+				"type": "String"
+			}
+			
+		],
+		"query": "update userdata set reset_password_token = ?,insertionTime = now() where user_name = ?"
+	},
+	"getToken": {
+		"parameters": [
+			{
+				"name": "token",
+				"type": "String"
+			}
+		],
+		"query": "SELECT user_name, reset_password_token FROM userdata WHERE reset_password_token = ?"
+	},
+	"updatePassword": {
+		"parameters": [
+		  {
+				"name": "token",
+				"type": "String"
+			},
+			{
+				"name": "password",
+				"type": "String"
+			},
+			{
+				"name": "username",
+				"type": "String"
+			}
+			
+		],
+		"query": "update userdata set password = crypt(?, gen_salt('bf',10)),reset_password_token = ? where user_name = ?"
+	},
+		"tokenVerification": {
+		 "parameters": [
+			{
+				"name": "token",
+				"type": "String"
+			}
+		],
+		"query": "SELECT * FROM userdata WHERE reset_password_token = ?"
+	},
+		"emailVerification": {
+		 "parameters": [
+			{
+				"name": "username",
+				"type": "String"
+			}
+		],
+		"query": "SELECT * FROM userdata WHERE user_name = ?"
+	},
+		"getTotalNoOfProjects": {
+		 "parameters": [
+		],
+		"query": "select prj_name from project_list"
+	},
+	"getActiveInactiveProjects": {
+		 "parameters": [
+		 {
+				"name": "prj_status",
+				"type": "Integer"
+			}
+		],
+		"query": "select prj_name from project_list where prj_status= ?;"
+	},
+	"getClientDetails": {
+		 "parameters": [
+		],
+		"query": "select client_name from client_details"
+	},
+	"getTotalRAD": {
+		 "parameters": [
+		  {
+				"name": "department",
+				"type": "String"
+			}
+		],
+		"query": "select count(*) as rowcount from employee where department = ?"
+	},
+	"getActiveInactiveRAD": {
+		 "parameters": [
+		 {
+				"name": "role",
+				"type": "String"
+			},
+		 {
+				"name": "emp_status",
+				"type": "Integer"
+			}
+		 
+		],
+		"query": "select * from employee where role = ? and emp_status = ? "
+	},
+		"getTotalCompanyEmployees": {
+		 "parameters": [
+		 
+		],
+		"query": "select * from employee where role = 'EMPLOYEE' "
+	},
+	"insertSalary": {
+		 "parameters": [
+		   {
+				"name": "eid",
+				"type": "String"
+			},
+		   {
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "role_status",
+				"type": "String"
+			},
+			{
+				"name": "salary",
+				"type": "Integer"
+			},
+			{
+				"name": "sal_date",
+				"type": "Date"
+			}
+		 
+		],
+		"query": "insert into salary (eid, sal_date, name, role_status, salary) values (?, ?, ?, ?, ?)"
+	},
+		"getProjectDetails": {
+		 "parameters": [
+		 {
+				"name": "on_project",
+				"type": "String"
+			} 
+		],
+		"query": "select * from employee where on_project= ?"
+	},
+	"getTotalSalary": {
+		 "parameters": [
+		 {
+				"name": "fromDate",
+				"type": "Date"
+			} ,
+			 {
+				"name": "toDate",
+				"type": "Date"
+			}
+		],
+		"query": "SELECT sum(salary) FROM salary WHERE sal_date between ? AND ?"
+	},
+	"getTotalExpenses": {
+		 "parameters": [
+		 {
+				"name": "fromDate",
+				"type": "Date"
+			} ,
+			 {
+				"name": "toDate",
+				"type": "Date"
+			}
+		],
+		"query": "SELECT sum(amount)from miscellaneous WHERE sal_date between ? AND ?"
+	},
+	"getTotalAmount": {
+		 "parameters": [
+		 {
+				"name": "fromDate",
+				"type": "Date"
+			} ,
+			 {
+				"name": "toDate",
+				"type": "Date"
+			}
+		],
+		"query": "SELECT sum(prj_income) FROM income WHERE prj_income_month BETWEEN ? and ?"
+	},
+	"updateEmployee": {
+		"parameters": [
+		{
+			"name": "eid",
+			"type": "String"
+		},
+		{
+			"name": "name",
+			"type": "String"
+		},
+		{
+			"name": "role",
+			"type": "String"
+		},
+		{
+			"name": "workmail",
+			"type": "String"
+		},
+		{
+			"name": "personal_mail",
+			"type": "String"
+		},
+		{
+			"name": "contact_number",
+			"type": "String"
+		},
+		{
+			"name": "dob",
+			"type": "Date"
+		},
+		{
+			"name": "on_project",
+			"type": "String"
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date"
+		},
+		{
+			"name": "termination_date",
+			"type": "Date"
+		},
+		{
+			"name": "gender",
+			"type": "String"
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer"
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer"
+		},
+		{
+			"name": "attachment",
+			"type": "String"
+		},
+		{
+			"name": "branch_name",
+			"type": "String"
+		},
+		{
+			"name": "aadhaar_no",
+			"type": "String"
+		},
+		{
+			"name": "account_number",
+			"type": "String"
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String"
+		},
+		{
+			"name": "bank_name",
+			"type": "String"
+		},
+		{
+			"name": "roleStatus",
+			"type": "String"
+		},
+		{
+			"name": "z_id",
+			"type": "String"
+		}
+			
+		],
+		"query": "update employee set eid = ? ,account_number = ?, role = ?,  aadhaar = ?, gender = ?, on_project = ?,hiring_date = ?,contact_number  = ? ,role_status = ? , ifsc_code = ? , photo = ? ,termination_date = ? , work_mail = ? , dob = ?, personal_mail = ?, emp_status = ?, branch_name = ? , name = ?, bank_name = ?  where eid = ? returning *"
+	},
+	"deleteDetails": {
+		 "parameters": [
+		   {
+				"name": "eid",
+				"type": "String"
+			} 
+		],
+		"query": "DELETE FROM employee WHERE eid= ?"
+	},
+	"insertClients": {
+		 "parameters": [
+		 {
+				"name": "client_id",
+				"type": "String"
+			} ,
+			 {
+				"name": "client_name",
+				"type": "String"
+			}
+		],
+		"query": "insert into client_details(client_name, client_id)values(?, ?);"
+	},
+	"deleteClientDetails": {
+		 "parameters": [
+		   {
+				"name": "client_id",
+				"type": "String"
+			} ,
+			 {
+				"name": "prj_id",
+				"type": "String"
+			} 
+		],
+		"query": "delete  from client_details where client_id= ?"
+	},
+	"updateClients": {
+		 "parameters": [
+		 {
+				"name": "client_id",
+				"type": "String"
+			} ,
+			 {
+				"name": "clientName",
+				"type": "String"
+			}
+			
+		],
+		"query": "update client_details set client_name = ? where client_id = ?"
+	},
+	"insertProject": {
+		 "parameters": [
+		 {
+				"name": "client_id",
+				"type": "String"
+		},
+		{
+				"name": "prj_id",
+				"type": "String"
+		},
+		 {
+				"name": "prj_name",
+				"type": "String"
+		},
+		{
+				"name": "prj_status",
+				"type": "Integer"
+		},
+		 {
+				"name": "fromdate",
+				"type": "Date"
+		},
+		{
+				"name": "todate",
+				"type": "Date"
+		}
+			
+		],
+		"query": "insert into project_list(prj_id ,end_date, prj_name, prj_status, client_id ,start_date )values(?,?,?,?,?,?);"
+	},
+	"updateProject": {
+		 "parameters": [
+		 {
+				"name": "client_ID",
+				"type": "String"
+		},
+		{
+				"name": "projectID",
+				"type": "String"
+		},
+		 {
+				"name": "prj_name",
+				"type": "String"
+		},
+		{
+				"name": "prj_status",
+				"type": "Integer"
+		},
+		 {
+				"name": "startdate",
+				"type": "Date"
+		},
+		{
+				"name": "todate",
+				"type": "Date"
+		}
+			
+		],
+		"query": "update project_list set end_date = ?, prj_name = ?,  prj_status = ?, start_date = ? where prj_id= ? and client_id = ?"
+	},
+	"getRADDetails": {
+		 "parameters": [
+			 {
+				"name": "department",
+				"type": "String"
+			}
+		],
+		"query": "SELECT * from employee where department = ? and emp_status =1"
+	},
+	"getRADInternCount": {
+		 "parameters": [
+			 {
+				"name": "role",
+				"type": "String"
+			}
+		],
+		"query": "select count(*) as rowcount from employee where role = ?"
+	},
+	"getRoleStatusNumbers": {
+		 "parameters": [
+		  {
+				"name": "department",
+				"type": "String"
+			}
+	
+		],
+		"query": "select * from employee where department = ?"
+	},
+	"getDetails": {
+		 "parameters": [
+		    {
+				"name": "department",
+				"type": "String"
+			},
+			{
+				"name": "role",
+				"type": "String"
+			}
+	
+		],
+		"query": "select * from employee where role =? and department = ?"
+	},
+	"insertRAD": {
+		"parameters": [
+		{
+			"name": "display_id",
+			"type": "String"
+		},
+		{
+			"name": "f_name",
+			"type": "String"
+		},
+		{
+			"name": "l_name",
+			"type": "String"
+		},
+		{
+			"name": "name",
+			"type": "String"
+		},
+		{
+			"name": "photo",
+			"type": "String"
+		},
+		{
+			"name": "resumePath",
+			"type": "String"
+		},
+		{
+			"name": "idproofPath",
+			"type": "String"
+		},
+		{
+			"name": "idproof",
+			"type": "String"
+		},
+		{
+			"name": "role",
+			"type": "String"
+		},
+		{
+			"name": "personal_mail",
+			"type": "String"
+		},
+		{
+			"name": "contact_number",
+			"type": "String"
+		},
+		{
+			"name": "dob",
+			"type": "Date"
+		},
+		{
+			"name": "on_project",
+			"type": "String"
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date"
+		},
+		{
+			"name": "gender",
+			"type": "String"
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer"
+		},
+		{
+			"name": "branch_name",
+			"type": "String"
+		},
+		{
+			"name": "account_number",
+			"type": "String"
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String"
+		},
+		{
+			"name": "bank_name",
+			"type": "String"
+		},
+		{
+			"name": "role_status",
+			"type": "String"
+		},
+		{
+			"name": "department",
+			"type": "String"
+		}
+		
+			
+		],
+		"query": "insert into employee (emp_id, account_number, role ,gender ,display_id, on_project ,l_name,photo, hiring_date ,contact_number  , ifsc_code, dob, personal_mail , emp_status , branch_name,f_name, bank_name, name, role_status, id_proof_photo, id_proof, resume, department )values(nextval('emp_id'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?) returning *"
+	},
+	"getDepartmentDetails": {
+		"parameters": [
+			
+		],
+		"query": "select distinct dept_name from department where dept_status=1"
+	},
+	"getRoleList": {
+		 "parameters": [
+		  {
+				"name": "department",
+				"type": "String"
+			}
+	
+		],
+		"query": "select distinct role from role where department = ?"
+	},
+	"roleDescriptionList": {
+		 "parameters": [
+			
+		 {
+			"name": "department",
+			"type": "String"
+			},
+			{
+			"name": "role",
+			"type": "String"
+		}
+	
+		],
+		"query": "select distinct role_status from role where   role= ? and department = ? "
+  },
+	"searchIndividualRAD": {
+		 "parameters": [
+		   {
+				"name": "emp_id",
+				"type": "Integer"
+			}
+		],
+		"query": "select * from employee where emp_id= ?"
+	},
+	"getExistingRADDetails": {
+		 "parameters": [
+		   {
+				"name": "emp_id",
+				"type": "Integer"
+			}
+		],
+		"query": "select * from employee where emp_id= ?"
+	},
+	"updateRAD": {
+		"parameters": [
+		{
+			"name": "display_id",
+			"type": "String"
+		},
+		{
+			"name": "f_name",
+			"type": "String"
+		},
+		{
+			"name": "l_name",
+			"type": "String"
+		},
+		{
+			"name": "name",
+			"type": "String"
+		},
+		{
+			"name": "photo",
+			"type": "String"
+		},
+		{
+			"name": "resumePath",
+			"type": "String"
+		},
+		{
+			"name": "idproofPath",
+			"type": "String"
+		},
+		{
+			"name": "idproof",
+			"type": "String"
+		},
+		{
+			"name": "role",
+			"type": "String"
+		},
+		{
+			"name": "personal_mail",
+			"type": "String"
+		},
+		{
+			"name": "contact_number",
+			"type": "String"
+		},
+		{
+			"name": "dob",
+			"type": "Date"
+		},
+		{
+			"name": "on_project",
+			"type": "String"
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date"
+		},
+		{
+			"name": "gender",
+			"type": "String"
+		},
+		{
+			"name": "emp_id",
+			"type": "Integer"
+		},
+		{
+			"name": "branch_name",
+			"type": "String"
+		},
+		{
+			"name": "account_number",
+			"type": "String"
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String"
+		},
+		{
+			"name": "bank_name",
+			"type": "String"
+		},
+		{
+			"name": "role_status",
+			"type": "String"
+		},
+		{
+			"name": "department",
+			"type": "String"
+		},
+		{
+			"name": "termination_date",
+			"type": "Date"
+		},
+		{
+			"name": "dept_id",
+			"type": "String"
+		}
+			
+		],
+		"query": "update employee set  account_number =?, role = ?,gender = ?,display_id = ?,on_project = ?, l_name = ?, photo= ?,hiring_date =? , contact_number= ?, ifsc_code= ?, termination_date=?,dob = ?, personal_mail=?,branch_name = ?,f_name=?, name =?, bank_name = ?, role_status = ?, id_proof_photo=?, resume=?, id_proof=?, department = ?,dept_id= ? where emp_id = ?"
+	}
+	
+	
+}

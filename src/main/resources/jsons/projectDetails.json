@@ -1,0 +1,20 @@
+{
+	"parameters": [
+	{
+			"name": "on_project",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "on_project"			
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "getProjectDetails",
+			"db": "getProjectDetails"
+		}
+	]
+}

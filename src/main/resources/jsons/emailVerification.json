@@ -1,0 +1,21 @@
+{
+	"parameters": [
+		{
+			"name": "username",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		}
+	],
+	"functions": [
+
+		{
+			"params": [
+				"username"
+			],
+			"class": "com.brandanswers.dashboard.funson.ResetManager",
+			"name": "emailVerification",
+			"db": "emailVerification"
+		}
+	]
+}

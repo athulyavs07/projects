@@ -1,0 +1,29 @@
+{
+	"parameters": [
+	    {
+			"name": "role",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+	
+		{
+			"name": "emp_status",
+			"type": "Integer",
+			"validation": [],
+			"nullable": false
+		}
+	],
+	"functions": [
+
+		{
+			"params": [
+			    "role",
+				"emp_status"
+			],
+			 "class"  :  "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+     		 "name" : "getActiveInactiveRAD",
+     		 "db":"getActiveInactiveRAD"
+		}
+	]
+}

@@ -1,0 +1,164 @@
+{
+	"parameters": [
+	
+		{
+			"name": "f_name",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "l_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "photo",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "resumePath",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "idproofPath",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "idproof",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "role",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "role_status",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "personal_mail",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "contact_number",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "dob",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "on_project",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "gender",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "account_number",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "bank_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "branch_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "department",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		}
+	],
+	"functions": [
+	  {
+			"params": [
+				"department",
+				"role"
+			],
+			"class": "com.brandanswers.dashboard.funson.RADManager",
+			"name": "getDetails",
+			"db": "getDetails"
+		},
+		{
+			"params": [
+				"f_name",
+				"l_name",
+				"name",
+				"photo",
+				"resumePath",
+				"idproofPath",
+				"idproof",
+				"role",
+				"role_status",
+				"personal_mail",
+				"contact_number",
+				"dob",
+				"on_project",
+				"hiring_date",
+				"gender",
+				"emp_status",
+				"account_number",
+				"ifsc_code",
+				"bank_name",
+				"branch_name",
+				"department"
+			],
+			"class": "com.brandanswers.dashboard.funson.RADManager",
+			"name": "insertRAD",
+			"db": "insertRAD"
+		}
+	]
+}

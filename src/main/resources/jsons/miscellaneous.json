@@ -1,0 +1,16 @@
+{
+  "parameters":[ 
+  
+  ],
+  "functions":[
+    {
+    "params": [
+			   			
+			],
+      "class"  :  "com.brandanswers.dashboard.funson.RADManager",
+      "name" : "getMiscellaneous",
+      "db":"getMiscellaneous"
+      }
+   
+  ]
+}

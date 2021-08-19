@@ -1,0 +1,33 @@
+{
+	"parameters": [
+		{
+			"name": "a",
+			"type": "Integer"
+		},
+		{
+			"name": "b",
+			"type": "Integer"
+		},
+		{
+			"name": "c",
+			"type": "Integer"
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"a",
+				"b",
+				"c"
+			],
+			"class": "com.sim.pricingassistant.funson.TestManager",
+			"name": "getTest"
+		},
+		{
+			"params": ["a","b","c","d"],
+			"mapper":"a:a,b:b,c:c,previousResult:d",
+			"type":"funson",
+			"name": "test"
+		}
+	]
+}

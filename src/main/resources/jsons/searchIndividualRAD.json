@@ -1,0 +1,22 @@
+{
+	"parameters": [
+		{
+			"name": "emp_id",
+			"type": "Integer",
+			"validation": [],
+			"nullable": false
+		}
+
+	],
+	"functions": [
+
+		{
+			"params": [
+				"emp_id"
+			],
+			"class": "com.brandanswers.dashboard.funson.RADManager",
+			"name": "searchIndividualRAD",
+			"db": "searchIndividualRAD"
+		}
+	]
+}

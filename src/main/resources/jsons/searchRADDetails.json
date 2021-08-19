@@ -1,0 +1,27 @@
+{
+	"parameters": [
+	{
+			"name": "department",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer",
+			"validation":[],
+			"nullable":true
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "department",
+			    "emp_status"			
+			],
+			"class": "com.brandanswers.dashboard.funson.RADManager",
+			"name": "getRADDetails"
+			
+		}
+	]
+}

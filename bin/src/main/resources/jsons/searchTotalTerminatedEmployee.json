@@ -1,0 +1,13 @@
+{
+	"parameters": [
+	],
+	"functions": [
+		{
+			"params": [			
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyManager",
+			"name": "getTotalTerminatedEmployees",
+			"db": "getTotalTerminatedEmployees"
+		}
+	]
+}

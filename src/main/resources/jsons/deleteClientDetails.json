@@ -1,0 +1,28 @@
+{
+	"parameters": [
+	{
+			"name": "client_id",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		},
+		{
+			"name": "prj_id",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		}
+		
+	],
+	"functions": [
+		{
+			"params": [
+			    "client_id"	,
+			    "prj_id"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "deleteClientDetails",
+			"db": "deleteClientDetails"
+		}
+	]
+}

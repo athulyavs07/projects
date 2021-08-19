@@ -1,0 +1,22 @@
+{
+	"parameters": [
+		{
+			"name": "eid",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		}
+
+	],
+	"functions": [
+
+		{
+			"params": [
+				"eid"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "deleteDetails",
+			"db": "deleteDetails"
+		}
+	]
+}

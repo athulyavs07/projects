@@ -1,0 +1,153 @@
+{
+	"parameters": [
+		{
+			"name": "eid",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "name",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "role",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "roleStatus",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "workmail",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "personal_mail",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "contact_number",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "dob",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "on_project",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "hiring_date",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "termination_date",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "gender",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "aadhaar_no",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "account_number",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "ifsc_code",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "bank_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "branch_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "emp_status",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "attachment",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "z_id",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"eid",
+				"name",
+				"role",
+				"roleStatus",
+				"workmail",
+				"personal_mail",
+				"contact_number",
+				"dob",
+				"on_project",
+				"hiring_date",
+				"termination_date",
+				"gender",
+				"emp_status",
+				"attachment",
+				"aadhaar_no",
+				"account_number",
+				"ifsc_code",
+				"bank_name",
+				"branch_name",
+				"z_id"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "updateEmployee",
+			"db": "updateEmployee"
+		}
+	]
+}

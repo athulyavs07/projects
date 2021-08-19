@@ -1,0 +1,28 @@
+{
+	"parameters": [
+		{
+			"name": "client_id",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "clientName",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		}
+		
+	],
+	"functions": [
+		{
+			"params": [
+				"client_id",
+				"clientName"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "updateClients",
+			"db": "updateClients"
+		}
+	]
+}

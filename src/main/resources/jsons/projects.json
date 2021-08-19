@@ -1,0 +1,19 @@
+{
+	"parameters": [
+	{
+			"name": "prj_status",
+			"type": "Integer",
+			"validation":[],
+			"nullable":true
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "prj_status"			
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "getProjects"
+		}
+	]
+}

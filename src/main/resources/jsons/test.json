@@ -1,0 +1,75 @@
+{
+	"parameters": [
+		{
+			"name": "a",
+			"type": "Integer",
+			"validation":[]
+		},
+		{
+			"name": "b",
+			"type": "Integer",
+			"validation":[]
+		},
+		{
+			"name": "c",
+			"type": "Integer",
+			"validation":[]
+		},
+		{
+			"name": "d",
+			"type": "Integer",
+			"validation":[]
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"a",
+				"b",
+				"c"
+			],
+			"class": "com.sim.pricingassistant.funson.TestManager",
+			"name": "getTest"
+		},
+		{
+			"params": [
+				"a",
+				"b",
+				"c",
+				"d"
+			],
+			"mapper": "a:a,b:b,c:c,previousResult:d",
+			"type": "future",
+			"name": "parallel-db-ops",
+			"functions": [
+				{
+					"params": [
+						"a",
+						"b",
+						"c"
+					],
+					"class": "com.sim.pricingassistant.funson.TestManager",
+					"name": "getTest"
+				},
+				{
+					"params": [
+						"a",
+						"b",
+						"c"
+					],
+					"class": "com.sim.pricingassistant.funson.TestManager",
+					"name": "getTest"
+				}
+			]
+		},
+		{
+			"params": [
+				"a",
+				"b",
+				"c"
+			],
+			"class": "com.sim.pricingassistant.funson.TestManager",
+			"name": "getResult"
+		}
+	]
+}

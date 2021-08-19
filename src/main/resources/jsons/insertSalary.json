@@ -1,0 +1,48 @@
+{
+	"parameters": [
+		{
+			"name": "eid",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "name",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "role_status",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "salary",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "sal_date",
+			"type": "Date",
+			"validation": [],
+			"nullable": false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"eid",
+				"name",
+				"role_status",
+				"salary",
+				"sal_date"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "insertSalary",
+			"db": "insertSalary"
+		}
+	]
+}

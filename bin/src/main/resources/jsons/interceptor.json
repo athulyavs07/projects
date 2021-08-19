@@ -1,0 +1,46 @@
+{
+	"adminRoleValidation": {
+		"funsons": [
+			"searchProcessName",
+			"searchProcessData",
+			"listCustomerName",
+			"listAOR",
+			"listAEX",
+			"listDirector",
+			"listMarketSegment",
+			"listCustomerSegment",
+			"saveCustomer",
+			"listRole",
+			"listSalesDirector",
+			"listPresident",
+			"listRegionalDirector",
+			"listEmployees",
+			"updateCustomer",
+			"saveEmployee"
+		],
+		"interceptors_pre": [
+			{
+				"className": "com.sim.pricingassistant.funson.InterceptorManager",
+				"method": "validateAdminRole"
+			}
+		],
+		"interceptors_post": []
+	},
+	"aexRoleValidation": {
+		"funsons": [
+			"saveRequest",
+			"updateRequest",
+			"getRequestApprovers",
+			"sendEmail",
+			"updateSales"
+		],
+		"interceptors_pre": [
+			{
+				"className": "com.sim.pricingassistant.funson.InterceptorManager",
+				"method": "validateAEXRole"
+			}
+		],
+		"interceptors_post": []
+	}
+	
+}

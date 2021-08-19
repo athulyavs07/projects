@@ -1,0 +1,20 @@
+{
+	"parameters": [
+	{
+			"name": "token",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "token"			
+			],
+			"class": "com.brandanswers.dashboard.funson.ResetManager",
+			"name": "updateToken",
+			"db": "updateToken"
+		}
+	]
+}

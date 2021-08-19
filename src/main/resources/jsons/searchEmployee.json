@@ -1,0 +1,20 @@
+{
+	"parameters": [
+	{
+			"name": "eid",
+			"type": "Integer",
+			"validation":[],
+			"nullable":false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "eid"			
+			],
+			"class": "com.brandanswers.dashboard.funson.EmployeeManager",
+			"name": "getEmployeeDetails",
+			"db": "getEmployeeDetails"
+		}
+	]
+}

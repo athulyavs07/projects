@@ -1,0 +1,14 @@
+{
+	"parameters": [
+	],
+	"functions": [
+		{
+			"params": [
+			   		
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyManager",
+			"name": "getTotalEmployees",
+			"db": "getTotalEmployees"
+		}
+	]
+}

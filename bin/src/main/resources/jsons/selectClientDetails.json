@@ -1,0 +1,12 @@
+{
+  "parameters":[ 
+  ],
+  "functions":[
+    {
+      "class"  :  "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+      "name" : "getClientDetails",
+      "db":"getClientDetails"
+      }
+   
+  ]
+}

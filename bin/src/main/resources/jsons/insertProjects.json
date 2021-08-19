@@ -1,0 +1,55 @@
+{
+	"parameters": [
+		{
+			"name": "client_id",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "prj_id",
+			"type": "String",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "prj_name",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "prj_status",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "fromdate",
+			"type": "Date",
+			"validation": [],
+			"nullable": false
+		},
+		{
+			"name": "todate",
+			"type": "Date",
+			"validation": [],
+			"nullable": false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+				"client_id",
+				"prj_id",
+				"prj_name",
+				"prj_status",
+				"fromdate",
+				"todate"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "insertProject",
+			"db": "insertProject"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"parameters": [
+	{
+			"name": "username",
+			"type": "String",
+			"validation":[],
+			"nullable":false
+		}
+	],
+	"functions": [
+		{
+			"params": [
+			    "username"			
+			],
+			"class": "com.brandanswers.dashboard.funson.ListManager",
+			"name": "get",
+			"db": "getUser"
+		}
+	]
+}

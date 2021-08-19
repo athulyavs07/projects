@@ -1,0 +1,73 @@
+{
+	"parameters": [
+		{
+			"name": "remark",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "emp_id",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "salary",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		
+		
+		{
+			"name": "emp_role_status",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		
+		{
+			"name": "mdate",
+			"type": "Date",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "mis_id",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "mis_type",
+			"type": "String",
+			"validation": [],
+			"nullable": true
+		},
+		{
+			"name": "mislea_amount",
+			"type": "Integer",
+			"validation": [],
+			"nullable": true
+		}
+		
+	],
+	"functions": [
+		{
+			"params": [
+				"remark",
+				"salary",
+				"emp_id",
+				"emp_role_status",
+				"mdate",
+				"mis_id",
+				"mis_type",
+				"mislea_amount"
+			],
+			"class": "com.brandanswers.dashboard.funson.CompanyOverviewManager",
+			"name": "updateSalary"
+			
+		}
+	]
+}
